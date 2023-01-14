@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Button1 from "./components/Button1";
+import Button2 from "./components/Button2";
+import styled from "styled-components";
+import TailwindComponent from "./components/TailwindComponent";
+
+const Container = styled.div`
+  display: flex;
+`;
+
+const Button = styled.button`
+  background: transparent;
+  border-radius: 3px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Button1 />
+      <Button2 />
+      <Container>
+        <Button></Button>
+      </Container>
+      <TailwindComponent />
+    </>
   );
 }
 
